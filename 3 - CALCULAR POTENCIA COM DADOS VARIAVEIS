@@ -1,0 +1,47 @@
+/*
+  crie um programa que calcula a potencia de n^e, onde n varia de 
+  ni ate nf e ei ate ef. nf >= ni, ef >= ei e ei >= 0, lembrando 
+  que se e = 0 o resultado e 1 e se e = 1 o resultado e n.
+*/
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int ei, ef, ni, nf, aux_pot;
+  
+  cout << "entre com ni: ";
+  cin >> ni;
+  cout << "entre com nf: ";
+  cin >> nf;
+  cout << "entre com ei: ";
+  cin >> ei;
+  cout << "entre com ef: ";
+  cin >> ef;
+  cout << endl;
+
+  for(int i = ni; i <= nf; i++)// variar o n
+  {
+    for(int j = ei; j <= ef; j++) // variar o e
+    {
+      if(j == 0) // se e = 0, valor = 1
+      {
+        cout << i << "^0 = 1" << endl;
+      }
+      else if(j == 1) // se e = 1, valor = n
+      {
+        cout << i << "^1 = " << i << endl;
+      }
+      else
+      {
+        aux_pot = i;
+        for(int z = 2; z<= j; z++) // calcular a pot
+        {
+          aux_pot *= i; // aux_pot e o responsavel pelo produtorio
+        }
+        cout << i << "^" << j << " = " << aux_pot << endl;
+      }
+    }
+    cout << endl;
+  } 
+}
