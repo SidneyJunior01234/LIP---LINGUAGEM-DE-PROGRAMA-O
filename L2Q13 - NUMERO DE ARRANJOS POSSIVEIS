@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int Fatorial(int num);
+
+int main() 
+{
+  int n, k;
+
+  cout << "Insira o valor de n: ";
+  cin >> n;
+  cout << "Insira o valor de k: ";
+  cin >> k;
+
+  float nk;
+  nk = Fatorial(n)/(Fatorial(n-k)*Fatorial(k));
+  cout << "Resultado: " << nk << endl;
+}
+
+int Fatorial(int num)
+{
+  int aux = 1;
+  for(int i=1; i<=num; i++)
+  {
+    aux *= i;
+  }
+  return aux;
+}
