@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int num = 3;
+  switch(num%3)
+  {
+    case 0:
+      cout << "Eh divisivel por 3." << endl;
+      break;
+    default:
+       cout << "Nao eh divisivel por 3." << endl;
+      break;
+  }
+}
