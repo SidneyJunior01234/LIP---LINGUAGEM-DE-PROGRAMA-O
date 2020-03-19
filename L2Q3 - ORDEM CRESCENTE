@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() 
+{
+  int a = 5, b = 4, c = 3, d = 1;
+  int aux;
+
+  while(a>b || b>c || c>d)
+  {
+    if(a > b)
+    {
+      aux = a;
+      a = b;
+      b = aux;
+    }
+    if(b > c)
+    {
+      aux = b;
+      b = c;
+      c = aux;
+    }
+    if(c > d)
+    {
+      aux = c;
+      c = d;
+      d = aux;
+    }
+  }
+  cout << "valor de a = " << a << ", valor de b = " << b << endl; 
+  cout << "valor de c = " << c << ", valor de d = " << d << endl;
+}
